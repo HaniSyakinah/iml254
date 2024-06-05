@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Me</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body { 
+      margin: 0;
+      font-family: "Cabin", sans-serif;
+      background-color: #e7e0ff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .banner {
+      width: 100%;
+      height: 300px;
+      background-image: url('images/rain.gif'); 
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .banner h1 {
+      color: white;
+      font-size: 36px;
+      font-family: 'Artifika', serif;
+    }
+
+
+    .header {
+      overflow: hidden;
+      background-color: #fef3ff;
+      padding: 2px 2px; 
+      font-family: "Cabin", sans-serif;
+      user-select: none;
+      display: flex; 
+      align-items: center; 
+    }
+
+    .header a {
+      color: black;
+      text-align: center;
+      padding: 2px; 
+      text-decoration: none;
+      font-size: 20px; 
+      line-height: 25px;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .header a.logo img {
+      width: 180px;
+      height: auto;
+    }
+
+    .header a:hover {
+      background-color: #ffffff;
+      color: black;
+    }
+
+    .header a.active {
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    .header-right {
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: 500px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header a {
+        text-align: left;
+        width: 100%;
+      }
+
+      .header-right {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+
+    footer {
+      background-color: #d9d0ff;
+      color: black;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .contact-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+      width: 550px;
+      padding 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .profile-pic {
+      width: 250px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .name {
+      font-family: "Fredoka", sans-serif;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .social-media {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social-media b {
+      margin-right: 20px;
+      font-weight: bold;
+    }
+
+    .social-media a {
+      margin-right: 20px;
+    }
+
+    .social-media img {
+      width: 30px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .disclaimer {
+      background-color: #d9d0ff;
+      color: black;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <div class="banner">
+    <h1>A Glimpse into My Life</h1>
+  </div>
+
+  <div class="header">
+    <a href="index.html" class="logo" title="Home"><img src="images/_Logo iml254.png" alt="Logo"></a>
+    <div class="header-right">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="family.html">Family</a>
+      <a href="friend.html">Friend</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+<div class="contact-box">
+  <img class="profile-pic" src="images/contact.png" alt="Profile Picture">
+  <div class="name">Nur Hani Syakinah Bt Abdul Aziz</div>
+  <div class="email"> nurhaniaziz10@gmail.com</div>
+  <div class="social-media">
+      <a href="https://www.tiktok.com/@nrhansyaaz?_t=8mEVOYNq2Og&_r=1" target="_blank" title="Tiktok"><img src="images/tiktok icon.png" alt="Tiktok"></a>
+    </a>
+    <a href="https://x.com/nrhansyaaz?t=7APnM3epDOtTLdCboLVxHQ&s=08" target="_blank" title="X" rel="noopener noreferrer">
+      <i class="fa fa-twitter" style="font-size:30px;color:black;"></i>
+    </a>
+    <a href="https://www.instagram.com/nrhansyaaz?igsh=NnN1bmh3a3FmbDU2" target="_blank" title="Instagram" rel="noopener noreferrer">
+      <i class="fa fa-instagram" style="font-size:30px;color:black;"></i>
+    </a>
+  </div>
+</div>
+
+<footer id="footer">
+  <div class="disclaimer">
+    <p>&copy; 2024 Nur Hani Syakinah. All rights reserved. Images may not be reproduced without permission.</p>
+  </div>
+</footer>
+
+</body>
+</html>

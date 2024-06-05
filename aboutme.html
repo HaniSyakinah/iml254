@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Me</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body { 
+      margin: 0;
+      font-family: "Cabin", sans-serif;
+      background-color: #e7e0ff; /* Set background color for the body */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .banner {
+      width: 100%;
+      height: 300px;
+      background-image: url('images/rain.gif'); /* Replace with your GIF path */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .banner h1 {
+      color: white;
+      font-size: 36px;
+      font-family: 'Artifika', serif;
+    }
+
+
+    .header {
+      overflow: hidden;
+      background-color: #fef3ff;
+      padding: 2px 2px; 
+      font-family: "Cabin", sans-serif;
+      user-select: none;
+      display: flex; 
+      align-items: center; 
+    }
+
+    .header a {
+      color: black;
+      text-align: center;
+      padding: 2px; 
+      text-decoration: none;
+      font-size: 20px; 
+      line-height: 25px;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .header a.logo img {
+      width: 180px; 
+      height: auto; 
+    }
+
+    .header a:hover {
+      background-color: #ffffff;
+      color: black;
+    }
+
+    .header a.active {
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    .header-right {
+      margin-left: auto; 
+    }
+
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .header-right {
+        float: none;
+        margin-left: 0; /* Reset margin */
+      }
+    }
+
+    /* Additional styles for footer and social media */
+    footer {
+      background-color: #d9d0ff;
+      color: black;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .social-media {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social-media b {
+      margin-right: 20px;
+      font-weight: bold;
+    }
+
+    .social-media a {
+      margin-right: 20px;
+    }
+
+    .social-media img {
+      width: 30px; 
+      height: auto;
+      border-radius: 50%; 
+    }
+
+    .disclaimer {
+      background-color: #d9d0ff;
+      color: black;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+
+    .about-title {
+      font-family: "Fredoka", sans-serif;
+      font-size: 48px;
+      color: #333;
+    }
+
+    /* Styles for the table */
+     table {
+       width: 80%;
+       margin: 20px auto;
+       border-collapse: separate; 
+       border-spacing: 0;
+       box-shadow: none;
+       border: none;
+    }
+
+
+    table, th, td {
+      border: none;
+    }
+
+    th, td {
+      font-family: "Quicksand", sans-serif;
+      padding: 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: white;
+    }
+
+    ul {
+      font-family: "Quicksand", sans-serif;
+    }
+
+    ul li {
+      font-family: "Quicksand", sans-serif;
+      font-weight: normal; 
+    }
+
+    td img {
+      border-radius: 10px;
+      width: 100%;
+    }
+
+    td:not(:empty) {
+      background-color: white;
+    }
+
+    td {
+      vertical-align: top;
+      width: 50%; 
+    }
+
+    .slideshow-text {
+      text-align: justify;
+    }
+
+    /* Center YouTube video */
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="banner">
+    <h1>A Glimpse into My Life</h1>
+  </div>
+
+  <div class="header">
+    <a href="index.html" class="logo" title="Home"><img src="images/_Logo iml254.png" alt="Logo"></a>
+    <div class="header-right">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="family.html">Family</a>
+      <a href="friend.html">Friend</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <h2 class="about-title">HELLO, I'm Hani.</h2>
+
+  <table>
+    <tr>
+      <td>
+        <img src="images/after.jpeg" alt="Image">
+      </td>
+      <td>
+        <p class="slideshow-text">Hi everyone! My name is Nur Hani Syakinah, and I am currently in the 4th semester student at University Teknologi Mara (UiTM), majoring in Library Informatics . My academic journey has been filled with exciting learning experiences and opportunities to explore my passion for library and information science.</p>
+
+        <p class="slideshow-text">Right now, I'm diving headfirst into the exciting world of my 4th semester, tackling courses like cataloging & classification, multimedia, web content development, libraries & customers, and metadata development. These subjects are fascinating, and web content development, in particular, has really grabbed my attention.</p>
+
+        <p class="slideshow-text">Building my own personal website has become my current project, and I'm absolutely loving the process!  It's a fantastic way to combine the knowledge I'm gaining in multimedia and web content creation, while also giving me a platform to showcase myself and my interests.</p>
+      </td>
+    </tr>
+<br><br>
+    <tr>
+      <th>More Specific About Me:
+         <ul type="circle">
+           <li>I'm from Jerantut, Pahang.</li>
+           
+           <li>Born on July 10, 2004, at Klinik Wanita Chan, Mentakab, Pahang.</li>
+     
+           <li>I'm the third of four siblings in a close-knit family that has always emphasized the importance of education and personal development.</li>
+
+           <li>My educational journey began at Sekolah Kebangsaan Kuala Mai Bharu and continued to Sekolah Menengah Kebangsaan Agama Tengku Ampuan Hajjah Afzan Pahang for my high school years.In my free time, I really enjoy watching a movie or videos on youtube just for entertainment.</li>
+
+           <li>Music provides me with a creative outlet and a way to unwind after a busy day of studies. I also love reading, particularly comics and fantasy novels, which spark my imagination and offer a welcome escape into different worlds.</li>
+
+           <li>As a huge CARAT, I'm always insipired by SEVENTEEN's talent and dedication. Their music brings me joy and motivates me to overcoming self-doubt, staying positive and optimistic and boosting creativity.</li>
+
+           <li>Happily Ever After is real.</li>
+          </ul>
+      </th>
+      <td>
+        <img src="images/before.jpg" alt="Image">
+      </td>
+    </tr>
+  </table>
+
+  <div class="video-wrapper">
+    <iframe width="700" height="560" src="https://www.youtube.com/embed/omLRbHkXyag?si=nCZACMDmCid-Ap0e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+<footer id="footer">
+  <div class="social-media">
+    <a href="https://www.tiktok.com/@nrhansyaaz?_t=8mEVOYNq2Og&_r=1" target="_blank" title="Tiktok"><img src="images/tiktok icon.png" alt="Tiktok"></a>
+    <a href="https://x.com/nrhansyaaz?t=7APnM3epDOtTLdCboLVxHQ&s=08" target="_blank" title="X" rel="noopener noreferrer">
+      <i class="fa fa-twitter" style="font-size:30px;color:black;"></i>
+    </a>
+    <a href="https://www.instagram.com/nrhansyaaz?igsh=NnN1bmh3a3FmbDU2" target="_blank" title="Instagram" rel="noopener noreferrer">
+      <i class="fa fa-instagram" style="font-size:30px;color:black;"></i>
+    </a>
+  </div>
+  <div class="disclaimer">
+    <p>&copy; 2024 Nur Hani Syakinah. All rights reserved. Images may not be reproduced without permission.</p>
+  </div>
+</footer>
+
+</body>
+</html>
+

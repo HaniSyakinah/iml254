@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- Added Josefin Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body { 
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #e7e0ff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      overflow: hidden;
+      background-color: #fef3ff;
+      padding: 2px 2px; /* Reduced padding to make the header smaller */
+      font-family: Franklin Gothic;
+      user-select: none;
+      display: flex; /* Use flexbox to align items */
+      align-items: center; /* Center-align items vertically */
+    }
+
+    .header a {
+      color: black;
+      text-align: center;
+      padding: 2px; /* Reduced padding */
+      text-decoration: none;
+      font-size: 20px; 
+      line-height: 25px;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .header a.logo img {
+      width: 180px;
+      height: auto;
+    }
+
+    .header a:hover {
+      background-color: #ffffff;
+      color: black;
+    }
+
+    .header a.active {
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    .header-right {
+      margin-left: auto; /* Push the header-right to the right */
+    }
+
+    @media screen and (max-width: 500px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header a {
+        text-align: left;
+        width: 100%;
+      }
+
+      .header-right {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+
+    footer {
+      background-color: #d9d0ff;
+      color: black;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .social-media {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social-media b {
+      margin-right: 20px;
+      font-weight: bold;
+    }
+
+    .social-media a {
+      margin-right: 20px;
+    }
+
+    .social-media img {
+      width: 30px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .about-title {
+      font-family: 'Josefin Sans', sans-serif; /* Updated font-family */
+      font-size: 48px;
+      color: #333;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: separate;
+      border-spacing: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      background-color: #fff;
+    }
+
+    th {
+      background-color: #f9f9f9;
+    }
+
+    ul {
+      font-family: 'Lora', serif;
+      padding-left: 20px;
+    }
+
+    ul li {
+      font-family: 'Lora', serif;
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+
+    td img {
+      border-radius: 10px;
+      width: 100%;
+    }
+
+    .slideshow-text {
+      text-align: justify;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="index.html" class="logo" title="Home"><img src="images/_Logo iml254.png" alt="Logo"></a>
+    <div class="header-right">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="family.html">Family</a>
+      <a href="friend.html">Friend</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <h2 class="about-title">My Journey Education</h2>
+
+  <table>
+    <tr>
+      <th>
+        Primary School
+        <ul type="circle">
+          <li>My primary education began at Sekolah Kebangsaan Kuala Mai Bharu, a place filled with unforgettable memories and experiences.</li>
+          <li>On my first day, I felt a mix of excitement and nervousness as I walked into the classroo, greeted by the warm smile of my first teacher, Mrs. Gee. She is my Malay language teacher that made laarning so enjoyable  with creative teaching methods.</li>
+          <li>I quickly developed a love for reading.Every 2 week, I eagerly borrowed new books from the school library, diving into adventuresand tales that sparked my imagination.</li>
+          <li>Joining the choral speaking was one of my most cherished experinces. We practiced diligently and performed at various school events.</li>
+          <li>I also participated actively in sports, particularly in running events. Sports day was always an exciting time for me, and I took part in several races, often finishing in the top positions. These events taught me the importance of discipline, perseverance, and physical fitness.</li>
+          <li>In addition to my academic and sports achivements, I was pround to serve as a school prefect. This role helped me develop leadership skills and a sense of responsibility. I learned to manage my time efficiently, balancing my duties with my studies and extracurricular activities.</li>
+          <li>One of the most memorable school tris was a visit to the National Science Centre. The interactive exhibits and fascinating displays ignited a lifelong passion for science and exploration in me. It was an eye-opening experience that broadened my horizons.</li>
+          <li>These formative years at Sekolah Kebangsaan Kuala Mai Bharu laid a strong foundation for my future. The lessons learned, friendships made, and the love for learning instilled in me during these years have had a lasting impact in my academic and personal growth.</li>
+        </ul>
+      </th>
+      <td>
+        <img src="images/skrendah.png" alt="Primary School">
+      </td>
+    </tr>
+    <tr>
+      <th>
+        High School
+        <ul type="circle">
+          <li>I attended Sekolah Menengah Kebangsaan Agama Tengku Ampuan Hajjah Afzan Pahang from 2017 to 2022, navigating both academic challenges and significant personal growth.</li>
+          <li>>During Form 4 and SPM, studying became particularly difficult due to the COVID-19 pandemic. The shift to online learning and the lack of face-to-face interaction with teachers and classmates were major challenges.</li>
+          <li>I led the school’s marching team during various events, honing my leadership and coordination skills.</li>
+          <li>A trip to Kidzania during my Form 1 year was incredibly fun, especially because I got to go with my friends. It was an unforgettable experience.</li>
+          <li>Despite not being particularly strong in academics, my time in high school was enriched by the experiences I had, especially with my friends, and living in the hostel provided me with a unique sense of independence and camaraderie.</li>
+          <li>High school was a period of significant personal growth, where I made lifelong friends and gained confidence and self-awareness, despite the difficulties of the pandemic.</li>
+        </ul>
+      </th>
+      <td>
+        <img src="images/menengah.png" alt="High School">
+      </td>
+    </tr>
+    <tr>
+      <th>
+        University
+        <ul type="circle">
+          <li>I am currently pursuing a Diploma in Library Informatics at UiTM Kedah. I started my journey here in 2022, and I am currently in my fourth semester.</li>
+          <li>Studying in university has been both challenging and rewarding. I have delved deep into the field of Library Informatics, learning about information organization, digital libraries, and information retrieval systems.</li>
+          <li>Despite the academic rigor, I have enjoyed the vibrant campus life and the sense of community among my peers. Interacting with like-minded individuals and participating in various extracurricular activities have enriched my university experience.</li>
+          <li>As I progress through my diploma program, I am excited to continue expanding my knowledge and skills in Library Informatics and to embark on new opportunities for personal and professional growth.</li>
+        </ul>
+      </th>
+      <td>
+        <img src="images/uitm.png" alt="University">
+      </td>
+    </tr>
+  </table>
+
+  <footer id="footer">
+    <div class="social-media">
+      <b>Follow Me</b>
+      <a href="https://www.tiktok.com/@nrhansyaaz?_t=8mEVOYNq2Og&_r=1" target="_blank" title="Tiktok"><img src="images/tiktok.png" alt="Tiktok"></a>
+      <a href="https://x.com/nrhansyaaz?t=7APnM3epDOtTLdCboLVxHQ&s=08" target="_blank" title="X"><img src="images/x.png" alt="X"></a>
+      <a href="https://www.instagram.com/nrhansyaaz?igsh=NnN1bmh3a3FmbDU2" target="_blank" title="Instagram"><img src="images/instagram.png" alt="Instagram"></a>
+    </div>
+  </footer>
+
+</body>
+</html>
+

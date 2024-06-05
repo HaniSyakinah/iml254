@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Gallery</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body { 
+      margin: 0;
+      font-family: "Cabin", sans-serif;
+      background-color: #e7e0ff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .banner {
+      width: 100%;
+      height: 300px;
+      background-image: url('images/rain.gif'); 
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .banner h1 {
+      color: white;
+      font-size: 36px;
+      font-family: 'Artifika', serif;
+    }
+
+    .header {
+      overflow: hidden;
+      background-color: #fef3ff;
+      padding: 2px 2px;
+      font-family: "Cabin", sans-serif;
+      user-select: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .header a {
+      color: black;
+      text-align: center;
+      padding: 2px;
+      text-decoration: none;
+      font-size: 20px; 
+      line-height: 25px;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .header a.logo img {
+      width: 180px;
+      height: auto;
+    }
+
+    .header a:hover {
+      background-color: #ffffff;
+      color: black;
+    }
+
+    .header a.active {
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    .header-right {
+      margin-left: auto;
+      display: flex;
+    }
+
+    @media screen and (max-width: 500px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header a {
+        text-align: left;
+        width: 100%;
+      }
+
+      .header-right {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+
+    .title-container {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #f0f0f0;
+    }
+
+    .title-container h1,
+    .title-container p {
+      font-family:  "Fredoka", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+
+    .column {
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+      position: relative;
+    }
+
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: rgba(50, 50, 50, 0.7);
+    }
+
+    .column:hover .overlay {
+      opacity: 1;
+    }
+
+    .text {
+      font-family: "Quicksand", sans-serif;
+      color: white;
+      font-size: 30px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    @media screen and (max-width: 800px) {
+      .column {
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .column {
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+
+    #myBtn {
+      font-family: "Quicksand", sans-serif;
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 20px; 
+      border: none;
+      outline: none;
+      background-color: transparent; 
+      color: black;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    #myBtn:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #d9d0ff;
+      color: black;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .social-media {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social-media b {
+      margin-right: 20px;
+      font-weight: bold;
+    }
+
+    .social-media a {
+      margin-right: 20px;
+    }
+
+    .social-media img {
+      width: 30px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .disclaimer {
+      background-color: #d9d0ff;
+      color: black;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <h1>A Glimpse into My Life</h1>
+  </div>
+
+  <div class="header">
+    <a href="index.html" class="logo" title="Home"><img src="images/_Logo iml254.png" alt="Logo"></a>
+    <div class="header-right">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="family.html">Family</a>
+      <a href="friend.html">Friend</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  
+  <div class="title-container">
+    <h1>Snapshot of Life</h1>
+    <p>Discover a gallery that celebrates the everyday and the extraordinary.</p>
+    <p>'Snapshots of Life' features a curated selection of photos that capture the essence of our world, from the mundane to the magical. </p>
+  </div>
+
+  <!-- Photo Grid -->
+  <div class="row"> 
+    <div class="column">
+      <img src="images/gallery1.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">My Parents at My Sister's Convo</div>
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="images/gallery11.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Little Me</div>
+      </div>
+    </div>  
+
+    <div class="column">
+      <img src="images/gallery3.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Nightfall Street</div>
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="images/gallery7.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Triumphant Finish</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row"> 
+    <div class="column">
+      <img src="images/gallery9.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Lazy Afternoon</div>
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="images/gallery10.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">3rd Generation</div>
+      </div>
+    </div>  
+
+    <div class="column">
+      <img src="images/gallery4.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Hello Sky</div>
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="images/gallery2.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Childhood Memories</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row"> 
+    <div class="column">
+      <img src="images/gallery13.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">The Trio's Comeback</div>
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="images/gallery8.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Gen Z Vibez</div>
+      </div>
+    </div>  
+
+    <div class="column">
+      <img src="images/gallery17.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Happy Nephews</div>
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="images/gallery14.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Family Museum Outing</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row"> 
+    <div class="column">
+      <img src="images/gallery21.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Family Getaway</div>
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="images/gallery16.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Pre-Exam Feast with Friends</div>
+      </div>
+    </div>  
+
+    <div class="column">
+      <img src="images/gallery23.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">KLCC: Where Skyscrapers Slay the Skyline</div>
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="images/gallery6.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Eid Al-Adha with Fam</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row"> 
+    <div class="column">
+      <img src="images/gallery15.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Crocs Gang</div>
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="images/gallery28.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Seventeen Concert: Mingyu Brings the Fire 🔥</div>
+      </div>
+    </div>  
+
+    <div class="column">
+      <img src="images/gallery22.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Specs Squad</div>
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="images/gallery19.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Moongazing Magic</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row"> 
+    <div class="column">
+      <img src="images/gallery32.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Kelantan Vibez</div>
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="images/gallery33.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">Pizza Ad</div>
+      </div>
+    </div>  
+
+    <div class="column">
+      <img src="images/gallery34.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">D Squads</div>
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="images/gallery35.jpg" alt="Avatar" style="width:100%">
+      <div class="overlay">
+        <div class="text">My Favourite Foods</div>
+      </div>
+    </div>
+  </div>
+
+<audio controls autoplay loop>
+  <source src="video/seventeen.mp3" type="audio/mpeg">
+</audio controls autoplay>
+</audio>
+
+<footer id="footer">
+  <div class="social-media">
+    <a href="https://www.tiktok.com/@nrhansyaaz?_t=8mEVOYNq2Og&_r=1" target="_blank" title="Tiktok"><img src="images/tiktok icon.png" alt="Tiktok"></a>
+    <a href="https://x.com/nrhansyaaz?t=7APnM3epDOtTLdCboLVxHQ&s=08" target="_blank" title="X" rel="noopener noreferrer">
+      <i class="fa fa-twitter" style="font-size:30px;color:black;"></i>
+    </a>
+    <a href="https://www.instagram.com/nrhansyaaz?igsh=NnN1bmh3a3FmbDU2" target="_blank" title="Instagram" rel="noopener noreferrer">
+      <i class="fa fa-instagram" style="font-size:30px;color:black;"></i>
+    </a>
+  </div>
+  <div class="disclaimer">
+    <p>&copy; 2024 Nur Hani Syakinah. All rights reserved. Images may not be reproduced without permission.</p>
+  </div>
+</footer>
+
+
+  <button id="myBtn" onclick="topFunction()" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+</script>
+</body>
+</html>
+

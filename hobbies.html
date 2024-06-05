@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Hobbies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body { 
+      margin: 0;
+      font-family: "Cabin", sans-serif;
+      font-size: 25px;
+      background-color: #e7e0ff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .banner {
+      width: 100%;
+      height: 300px;
+      background-image: url('images/rain.gif'); 
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .banner h1 {
+      color: white;
+      font-size: 36px;
+      font-family: 'Artifika', serif;
+    }
+
+    .header {
+      overflow: hidden;
+      background-color: #fef3ff;
+      padding: 2px 2px; 
+      font-family: "Cabin", sans-serif;
+      user-select: none;
+      display: flex; 
+      align-items: center; 
+    }
+
+    .header a {
+      color: black;
+      text-align: center;
+      padding: 2px;
+      text-decoration: none;
+      font-size: 20px;
+      line-height: 25px;
+      border-radius: 4px;
+      margin-right: 10px; 
+    }
+
+    .header a.logo img {
+      width: 180px;
+      height: auto;
+    }
+
+    .header a:hover {
+      background-color: #ffffff;
+      color: black;
+    }
+   
+    .header a.home {
+      float: left; 
+      margin-right: 10px; 
+    }
+
+
+    .header a.active {
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    .header-right {
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: 500px) {
+      .header {
+        display: block;
+        text-align: left;
+      }
+
+      .header a {
+        text-align: left;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0; 
+      }
+
+      .header-right {
+        margin-left: 0%;
+      }
+    }
+
+    main {
+      padding: 20px;
+      flex: 1;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hobby {
+      margin-bottom: 40px;
+    }
+
+    .hobby h2 {
+      font-family: "Fredoka", sans-serif;
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .hobby img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .hobby p {
+      font-family: "Quicksand", sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    div.scroll-container {
+      background-color: #EAECEE;
+      overflow: auto;
+      white-space: nowrap;
+      padding: 10px;
+    }
+
+    div.scroll-container img {
+      padding: 10px;
+    }
+
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 24px; 
+      border: none;
+      outline: none;
+      background-color: transparent; 
+      color: black; 
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    #myBtn:hover {
+      background-color: rgba(0, 0, 0, 0.1); 
+    }
+
+    footer {
+      background-color: #d9d0ff;
+      color: black;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .social-media {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social-media b {
+      margin-right: 20px;
+      font-weight: bold;
+    }
+
+    .social-media a {
+      margin-right: 20px;
+    }
+
+    .social-media img {
+      width: 30px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .disclaimer {
+      background-color: #d9d0ff;
+      color: black;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="banner">
+    <h1>A Glimpse into My Life</h1>
+  </div>
+
+  <div class="header">
+    <a href="index.html" class="logo" title="Home"><img src="images/_Logo iml254.png" alt="Logo"></a>
+    <div class="header-right">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="family.html">Family</a>
+      <a href="friend.html">Friend</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <main>
+    <section>
+      <h1>My Favourite Things To Do</h1>
+      <br><br>
+      <div class="hobby">
+        <h2>Chasing Sunset</h2>
+        <div class="scroll-container">
+          <img src="images/gallery26.jpg" alt="Chasing Sunset" width="210" height="100">
+          <img src="images/gallery27.jpg" alt="Chasing Sunset" width="210" height="100">
+          <img src="images/gallery24.jpg" alt="Chasing Sunset" width="210" height="100">
+          <img src="images/gallery25.jpg" alt="Chasing Sunset" width="210" height="100">
+          <img src="images/gallery29.jpg" alt="Chasing Sunset" width="210" height="100">
+          <img src="images/gallery30.jpg" alt="Chasing Sunset" width="210" height="100">
+        </div>
+        <p>Sunsets often symbolize the end of a busy day, a time for relaxation and reflection. Taking photos of sunsets can be a calming and meditative experience, allowing me to disconnect from the stresses of daily life and appreciate the natural world.</p>
+      </div>
+      <div class="hobby">
+        <h2>My YouTube Obsession</h2>
+        <div class="scroll-container">
+          <iframe width="350" height="200" src="https://www.youtube.com/embed/bA7XCoBsIDs?si=v-x7vblJ4Y7TVWjD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="350" height="200" src="https://www.youtube.com/embed/wHAZyUAnO-0?si=wNo3fx8HD9vNUlIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="350" height="200" src="https://www.youtube.com/embed/JpJJMf50UmM?si=tNrlaM67M7T1SRf5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="350" height="200" src="https://www.youtube.com/embed/DdkIMCYvkQM?si=cGUP0Q94ql0NaeWV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="350" height="200" src="https://www.youtube.com/embed/vz9ET60on3A?si=3hgfPtppVBrWEGbu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p>I love YouTube because it's like my own personal entertainment buffet. It has endless choices, from funny clips to calming music, so I can always find something tasty for my mood.</p>
+      </div>
+      <div class="hobby">
+        <h2>For the Love of Food</h2>
+        <div class="scroll-container">
+          <img src="images/food1.jpg" alt="For the Love of Food" width="210" height="100">
+          <img src="images/food2.jpg" alt="For the Love of Food" width="210" height="100">
+          <img src="images/food3.jpg" alt="For the Love of Food" width="210" height="100">
+          <img src="images/food4.jpg" alt="For the Love of Food" width="210" height="100">
+          <img src="images/food5.jpg" alt="For the Love of Food" width="210" height="100">
+          <img src="images/food6.jpg" alt="For the Love of Food" width="210" height="100">
+          <img src="images/food14.jpg" alt="For the Love of Food" width="210" height="100">
+          <img src="images/food13.jpg" alt="For the Love of Food" width="210" height="100">
+          <img src="images/food12.jpg" alt="For the Love of Food" width="210" height="100">
+          <img src="images/food11.jpg" alt="For the Love of Food" width="210" height="100">
+          <img src="images/food10.jpg" alt="For the Love of Food" width="210" height="100">
+          <img src="images/food9.jpg" alt="For the Love of Food" width="210" height="100">
+          <img src="images/food7.jpg" alt="For the Love of Food" width="210" height="100">
+        </div>
+        <p>I live to eat, not cook! Always down to try new things, even the viral stuff. But when it comes to comfort, my mom's home cooking (especially 'masakan kampung') wins every time.</p>
+      </div>
+      <div class="hobby">
+        <h2>Sonic Daydreamer</h2>
+        <div class="scroll-container">
+          <a href="https://music.youtube.com/watch?v=1-fDgT5ze84&si=p0yOx5rpX_cTY1m1" target="_blank" title="Music" rel="noopener noreferrer">I Like Me Better|Lauv</a>
+          <br><br>
+          <a href="https://music.youtube.com/watch?v=ZgymJ6AfEgQ&si=S7ue-RAMX2haoN3u" target="_blank" title="Music" rel="noopener noreferrer">The Reasons of My Smiles|BSS</a>
+          <br><br>
+          <a href="https://music.youtube.com/watch?v=fl80JQQv0pU&si=EFh63GjvFuhSGNox" target="_blank" title="Music" rel="noopener noreferrer">That's okay|D.O</a>
+          <br><br>
+          <a href="https://music.youtube.com/watch?v=8NT-3kryMNo&si=fhpxy0jkkIIktMYG" target="_blank" title="Music" rel="noopener noreferrer">Anyone|Seventeen</a>
+          <br><br>
+          <a href="https://music.youtube.com/playlist?list=PLA77Pm4Un2nxtX4HWnjFP3II-PIAbWhxx&si=cW1tkwt_dCWKbK-O" target="_blank" title="Music" rel="noopener noreferrer">Favourite Playlist</a>
+          <br><br>
+          <a href="https://music.youtube.com/playlist?list=PLiWPRydq71i9dqNndHsgrjBeN1I1LM7AQ&si=cErXd_wK3sUV3k5Q" target="_blank" title="Music" rel="noopener noreferrer">My Playlist</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<footer id="footer">
+  <div class="social-media">
+    <a href="https://www.tiktok.com/@nrhansyaaz?_t=8mEVOYNq2Og&_r=1" target="_blank" title="Tiktok"><img src="images/tiktok icon.png" alt="Tiktok"></a>
+    <a href="https://x.com/nrhansyaaz?t=7APnM3epDOtTLdCboLVxHQ&s=08" target="_blank" title="X" rel="noopener noreferrer">
+      <i class="fa fa-twitter" style="font-size:30px;color:black;"></i>
+    </a>
+    <a href="https://www.instagram.com/nrhansyaaz?igsh=NnN1bmh3a3FmbDU2" target="_blank" title="Instagram" rel="noopener noreferrer">
+      <i class="fa fa-instagram" style="font-size:30px;color:black;"></i>
+    </a>
+  </div>
+  <div class="disclaimer">
+    <p>&copy; 2024 Nur Hani Syakinah. All rights reserved. Images may not be reproduced without permission.</p>
+  </div>
+</footer>
+
+
+  <button id="myBtn" onclick="topFunction()" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+</body>
+</html>
+
